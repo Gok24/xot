@@ -1,0 +1,133 @@
+.otpinp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 30px 0;
+}
+.otpinp .o input{
+    width: 50px;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+    border-radius: 10px;
+    outline: 1px solid rgba(255, 255, 255, 0);
+    border: 2px solid rgba(30, 143, 255, 0);
+    font-family: Manrope;
+    font-weight: 500;
+}
+.otpinp .o input[type=number]::-webkit-inner-spin-button, 
+.otpinp .o input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.otpinp .o input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.otpinp .o input:focus{
+    outline: 1px solid rgb(30, 105, 255);
+    border: 2px solid rgba(30, 143, 255, 0.288);
+}
+.toastcontainer{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    
+    width: 100%;
+    bottom: 80px;
+    justify-content: center;
+}
+.toast{
+    display: none;
+    align-items: center;
+    width: fit-content;
+    font-weight: 500;
+    background: #0000000e;
+    padding: 10px 15px;
+    opacity: 1;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    position: relative;
+    top: 0;
+}
+.toast.show{
+    display: flex;
+    animation: slx 100ms ease-in;
+}
+@keyframes slx {
+    0%{
+        opacity: 0;
+    }
+}
+.arw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ar .a{
+    /* height: 60px;
+    width: 1px;
+    border-radius: 2px; */
+    display: block;
+    /* background: #383838; */
+
+}
+.ar .a svg{
+    height: 70px;
+    transform: rotate(45deg);
+    stroke-dasharray: 20;
+}
+
+.ar .t{
+    font-size: 3rem;
+}
+.otpinp{
+    opacity: 1;
+}
+.otpinp.in-view .o:nth-child(1){
+    position: relative;
+    top: 0;
+    animation: sldv 800ms ease-in;
+    opacity: 1;
+}
+.otpinp.in-view .o:nth-child(2){
+    position: relative;
+    top: 0;
+    animation: sldv 950ms ease-in;
+
+    opacity: 1;
+}
+.otpinp.in-view .o:nth-child(3){
+    position: relative;
+    top: 0;
+    animation: sldv 1090ms ease-in;
+    opacity: 1;
+}
+.otpinp.in-view .o:nth-child(4){
+    position: relative;
+    top: 0;
+    animation: sldv 1120ms ease-in;
+    opacity: 1;
+}
+@keyframes sldv{
+    0%{
+        top: 10px;
+        opacity: 0;
+        filter: blur(10px);
+    }
+    90%{
+        top: 0;
+        filter: blur(0);
+    }
+}
